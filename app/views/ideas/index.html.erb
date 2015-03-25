@@ -1,0 +1,24 @@
+<h1>Virtual Documentation Center</h1>
+
+  <div id="grid" class="main">
+    <% @ideas.each do |idea| %>
+            
+      <div class="view">
+        <div class="view-back">
+          <span data-icon=""><%= idea.name %></span>
+          <!-- <span data-icon="D">asdsa</span> -->
+            <%= link_to '?', idea %>
+					</div>
+        <%= image_tag idea.picture_url(:thumb) if idea.picture.present? %>
+				</div>
+			
+    <% end %>  
+		</div>
+<script type="text/javascript">	
+
+						$( '#grid' ).hoverfold();
+							
+		</script>
+
+
+
