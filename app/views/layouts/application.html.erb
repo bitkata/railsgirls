@@ -14,10 +14,10 @@
  
 <div id='cssmenu'>
 <ul>
-   <li><a href='/'><span>About the project</span></a></li>
-   <li class='active'><a href='/'><span>VDC</span></a></li>
-   <li><a href='/'><span>Partner</span></a></li>
-   <li><a href='/'><span>Network</span></a></li>
+   <li id='about'><a href='/'><span>About the project</span></a></li>
+   <li id='vdc'><a href='/ideas'><span>VDC</span></a></li>
+   <li id='partner'><a href='/'><span>Partner</span></a></li>
+   <li id='network'><a href='/'><span>Network</span></a></li>
   <% if user_signed_in? %>
     <li class="pull-right"><%= link_to 'New Doc', new_idea_path %></li>
     <li class="pull-right"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
@@ -29,27 +29,6 @@
 </ul>
 </div>  
   
-  
-<!--  
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Virtual Documentation Center</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><%= link_to 'New Doc', new_idea_path %></li>
-      </ul>
-    </div>
-  </div>
-</nav>
--->  
 <div class="container">
   <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
